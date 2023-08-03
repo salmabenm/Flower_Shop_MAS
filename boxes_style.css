@@ -1,0 +1,125 @@
+
+/********************/
+/*     Pricing     */
+/********************/
+
+.cards-2 {
+	padding: 20px;
+}
+
+.cards-2 .h2-heading {
+	margin-bottom: 3.75rem;
+	text-align: center;
+}
+
+.cards-2 .h2-heading span {
+	font-weight: 400;
+}
+
+.cards-2 .card {
+	margin-bottom: 5rem;
+	padding: 4rem 1rem;
+	border: 1px solid #5e6576;
+	border-radius: 20px;
+	background-color: transparent;
+	text-align: center;
+}
+
+.cards-2 .card-body {
+	padding: 0;
+}
+
+.cards-2 .card-title {
+	margin-bottom: 2rem;
+}
+
+.cards-2 .card-title .decoration-lines {
+	width: 30px;
+	margin-bottom: 0.25rem;
+}
+
+.cards-2 .card-title .decoration-lines.flipped {
+	transform: scaleX(-1);
+}
+
+.cards-2 .card-title span {
+	margin-right: 0.75rem;
+	margin-left: 0.75rem;
+	color: #222222;
+	font-weight: 700;
+	font-size: 1.5rem;
+	line-height: 2rem;
+	letter-spacing: -0.2px;
+}
+
+.cards-2 .card-body .list-unstyled {
+	margin-bottom: 3rem;
+	list-style-type: none;
+	font-size: 1.2rem;
+}
+
+.cards-2 .card-body .list-unstyled li {
+	margin-bottom: 0.625rem;
+}
+
+.cards-2 .card-body .price {
+	margin-bottom: 3rem;
+	color: #222222;
+	font-weight: 700;
+	font-size: 3rem;
+	line-height: 2rem;
+	letter-spacing: -0.2px;
+}
+
+@media (min-width: 992px) {
+	/* Pricing */
+	.cards-2 .card {
+		display: inline-block;
+		width: 298px;
+		vertical-align: top;
+	}
+	
+	.cards-2 .card:nth-of-type(3n+2) {
+		margin-right: 1rem;
+		margin-left: 1rem;
+	}
+	/* end of pricing */
+
+	
+}
+
+/* Min-width 1200px */
+@media (min-width: 1200px) {
+	
+	/* General Styles */
+	.container {
+		max-width: 1140px;
+	}
+	/* end of general styles */
+
+	/* Pricing */
+	.cards-2 .card {
+		width: 342px;
+	}
+	
+	.cards-2 .card:nth-of-type(3n+2) {
+		margin-right: 2.5rem;
+		margin-left: 2.5rem;
+	}
+	/* end of pricing */
+}
+
+.select-style {
+    width: 200px;
+    padding: 8px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    background-color: #f2f2f2;
+    color: #333;
+    float: right;
+    margin-right: 20px;
+  }
+  .select-style {
+	float: right;
+  }

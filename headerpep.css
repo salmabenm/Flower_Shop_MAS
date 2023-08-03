@@ -1,0 +1,412 @@
+:root{
+    --pink:#8FBC8F; ;
+    --light-bg:#f5f5f5;
+    --border:.2rem solid var(--blaiconek);
+    --box-shadow:0 .5rem 1rem rgba(0,0,0,.1);
+}
+*{
+    margin:0;padding:0;
+    box-sizing:border-box;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    outline: none ;border:none;
+    text-decoration:none;
+    text-transform: none;
+    transition:.2s linear;
+}
+html{
+    font-size:62.5% ;
+    scroll-behavior: smooth;
+    scroll-padding-top: 6rem;
+    overflow-x: hidden;
+}
+section{
+    padding:2rem 9%;
+}
+.heading{
+    text-align: center;
+    font-size: 4rem;
+    color: #333;
+    padding: 1rem;
+    margin: 2rem;
+    background:  rgba(194, 236, 193, 0.05);
+
+}
+.heading span{
+    color: var(--pink);
+}
+
+.header .flex{
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding:.4rem 2rem;
+    max-width: 1200px;
+    position: relative;
+ }
+ 
+ .header .flex .logo{
+    font-size: 2.5rem;
+    color:var(--pink);
+ }
+ 
+ .header .flex .navbar ul{
+    list-style: none;
+ }
+ 
+ .header .flex .navbar ul li{
+    float: left;
+    position: relative;
+ }
+
+ 
+ .header .flex .navbar ul li a{
+    font-size: 2rem;
+    padding:0 1.5rem;
+    color:#666;
+    display: block;
+
+ }
+ 
+ .header .flex .navbar ul li a:hover{
+    color:var(--pink);
+    
+ }
+ 
+ .header .flex .navbar ul li ul{
+    position: absolute;
+    left:0;
+    width: 15rem;
+    background-color: white;
+    animation: fadeIn .2s linear;
+    display: none;
+ }
+ 
+ .header .flex .navbar ul li ul li{
+    width: 100%;
+    padding: 5%;
+ }
+ 
+ .header .flex .navbar ul li:hover ul{
+    display: inline-block;
+ }
+ 
+ .header .flex .icons > *{
+    font-size: 2.5rem;
+    margin-left: 1rem;
+    color:var(--black);
+    cursor: pointer;
+ }
+ 
+ .header .flex .icons > *:hover{
+    color:var(--pink);
+ }
+ 
+ .header .flex .icons span{
+    font-size: 2rem;
+ }
+ 
+ #menu-btn{
+    display: none;
+ }
+ 
+ .header .flex .account-box{
+    position: absolute;
+    top:120%; right:2rem;
+    background-color: var(--white);
+    border:var(--border);
+    text-align: center;
+    box-shadow: var(--box-shadow);
+    padding:2rem;
+    border-radius: .5rem;
+    width: 33rem;
+    display: none;
+    animation: fadeIn .2s linear;
+ }
+ 
+ .header .flex .account-box.active{
+    display: block;
+ }
+ 
+ .header .flex .account-box p{
+    padding-bottom: 1rem;
+    font-size: 2rem;
+    color:var(--light-color);
+    line-height: 1.5;
+ }
+ 
+ .header .flex .account-box p span{
+    color:var(--pink);
+ }
+ 
+ .header .flex .account-box .delete-btn{
+    margin-top: .5rem;
+ }
+ header .logo{
+    font-size: 3rem;
+    color:#333;
+    font-weight: bolder;
+}
+header .logo span{
+    color:var(--pink);
+}
+ 
+ 
+ 
+
+
+/* media queriesv */
+@media (max-width:991px){
+    html{
+        font-size:55% ;   
+    }
+    header {
+        padding:2rem;
+    }
+    section {
+        padding:2rem;
+    }
+    .home {
+        background-position: left;
+    }
+}
+
+@media (max-width:678px){
+    header .fa-bars{
+        display: block;
+    }
+
+    header .navbar{
+        position: absolute;
+        top:100%; left:0; right:0;
+        background: #eee;
+        border-top: 1rem solid rgba(0,0,0,.1);
+        clip-path: polygon(0 0, 100% 0, 100% 0,0 0);
+    }
+
+    header #toggler:checked ~ .navbar{
+        clip-path:  polygon(0 0, 100% 0, 100% 100%,0% 100%);;
+    }
+
+    header .navbar a{
+        margin:1.5rem;
+        padding:1.rem;
+        background:#fff;
+        border:.1rem solid rgba(0,0,0,.1);
+        display: block;
+    }
+    .home .content h3{
+        font-size: 5rem;
+    }
+    .home .content span{
+        font-size: 2.5rem;
+    }
+    .icons-container .icons h3{
+        font-size: 2rem;
+    }
+    .icons-container .icons span{
+        font-size: 1.7rem;
+    }
+}
+
+@media (max-width:450px){
+    html{
+        font-size:50% ;   
+    }
+}
+.btn{
+    display: inline-block;
+    margin-top: 1rem;
+    border-radius: 5rem;
+    background: #333;
+    color: #fff;
+    padding: .9rem 3.5rem;
+    cursor: pointer;
+    font-size: 1.7rem; 
+    text-align: center;
+}
+.btn:hover{
+    background-color: var(--pink);
+}
+.Bouquet .box-container{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+}
+
+.Bouquet .box-container .box{
+    flex:1 1 30rem;
+    box-shadow:0 .5rem 1.5rem rgba(0,0,0,.1);
+    border-radius: .5rem;
+    border: .1rem solid rgba(0,0,0,.1);
+    position: relative;
+}
+.Bouquet .box-container .box .discount{
+    position: absolute;
+    top: 1rem; left: 1rem;
+    padding: .7rem 1rem;
+    font-size: 2rem;
+    color: var(--pink);
+    background: rgba(255,51,153,.05);
+    z-index: 1;
+    border-radius: .5rem;
+}
+.Bouquet .box-container .box .image{
+    position: relative;
+    text-align:center;
+    padding-top: 2rem;
+    overflow: hidden;
+}
+.Bouquet .box-container .box .image img{
+    height: 25rem;
+}
+.Bouquet .box-container .box:hover .image img{
+    transform: scale(1.1);
+}
+.Bouquet .box-container .box .image .icons{
+    position: absolute;
+    bottom: -7rem; left:0;right: 0;
+    display: flex;
+}
+.Bouquet .box-container .box:hover .image .icons{
+    bottom: 0;
+}
+.Bouquet .box-container .box .image .icons input{
+    height: 5rem;
+    line-height: 5rem;
+    font-size: 2rem;
+    width: 10%;
+    background: var(--pink);
+    color: #fff;
+}
+.Bouquet .box-container .box .image .icons .cart-btn{
+    border-left: .1rem solid #fff7;
+    border-right: .1rem solid #fff7;
+    width: 100%;
+}
+.Bouquet .box-container .box .image .icons input:hover{
+    background: #333;
+
+}
+.Bouquet .box-container .box .content{
+    padding: 2rem;
+    text-align: center;
+}
+.Bouquet .box-container .box .content h3{
+    font-size: 2.2rem;
+    color: #333;
+}
+.Bouquet .box-container .box .content .price{
+    font-size: 2rem;
+    color: var(--pink);
+    font-weight: bolder;
+    padding-top: 1rem ;
+}
+.Bouquet .box-container .box .content .price span{
+    font-size: 1.5rem;
+    color: #999;
+    font-weight: lighter;
+    text-decoration: none; 
+}
+
+.Bouquet .cart-total{
+    max-width: 1200px;
+    margin:0 auto;
+    padding:2rem;
+    text-align: center;
+    background-color: white;
+    border:.2rem solid white;
+    box-shadow: 0 .5rem 1rem rgba(0,0,0,.1);
+    border-radius: .5rem;
+    margin-top: 2rem;
+ }
+ 
+ .Bouquet .cart-total p{
+    font-size: 2.5rem;
+    color:#666;
+    margin-bottom: 1rem;
+ }
+ 
+ .Bouquet .cart-total p span{
+    color:var(--pink);
+ }
+
+/* media queriesv */
+@media (max-width:991px){
+    html{
+        font-size:55% ;   
+    }
+    header {
+        padding:2rem;
+    }
+    section {
+        padding:2rem;
+    }
+    .home {
+        background-position: left;
+    }
+}
+
+@media (max-width:678px){
+    #menu-btn{
+        display: inline-block;
+     }
+  
+    header .fa-bars{
+        display: block;
+    }
+
+    header .navbar{
+        position: absolute;
+        top:100%; left:0; right:0;
+        background: #eee;
+        border-top: 1rem solid rgba(0,0,0,.1);
+        clip-path: polygon(0 0, 100% 0, 100% 0,0 0);
+    }
+
+    header #toggler:checked ~ .navbar{
+        clip-path:  polygon(0 0, 100% 0, 100% 100%,0% 100%);;
+    }
+
+    header .navbar a{
+        margin:1.5rem;
+        padding:1.rem;
+        background:#fff;
+        border:.1rem solid rgba(0,0,0,.1);
+        display: block;
+    }
+    .home .content h3{
+        font-size: 5rem;
+    }
+    .home .content span{
+        font-size: 2.5rem;
+    }
+    .icons-container .icons h3{
+        font-size: 2rem;
+    }
+    .icons-container .icons span{
+        font-size: 1.7rem;
+    }
+}
+
+@media (max-width:450px){
+    html{
+        font-size:50% ;   
+    }
+}
+.icon-container {
+    position: relative;
+    display: inline-block;
+  }
+  
+  .notification-badge {
+    background-color: var(--pink);
+    color: white;
+    font-size: 12px;
+    font-weight: bold;
+    border-radius: 50%;
+    padding: 4px 8px;
+    position: absolute;
+    top: -14px;
+    right: -14px;
+  }
